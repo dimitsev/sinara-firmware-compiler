@@ -1,3 +1,8 @@
+"""
+Run this file in a tmux session
+to guarantee that firmware compilation will not be interrupted by problems with the ssh connection!
+"""
+
 import os
 import sinara_firmware_compiler as sinara
 
