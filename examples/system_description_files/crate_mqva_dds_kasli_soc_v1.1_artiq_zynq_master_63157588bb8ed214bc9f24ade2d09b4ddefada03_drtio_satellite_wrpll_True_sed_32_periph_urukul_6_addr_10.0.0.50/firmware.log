@@ -1,0 +1,133 @@
+Running phase: unpackPhase
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking source archive /nix/store/bcx11acpmsgpa2ln49vzfjh8xq6q7y20-src
+source root is src
+Executing cargoSetupPostUnpackHook
+Finished cargoSetupPostUnpackHook
+Running phase: patchPhase
+@nix { "action": "setPhase", "phase": "patchPhase" }
+Executing cargoSetupPostPatchHook
+Validating consistency between /build/src/Cargo.lock and /build/cargo-vendor-dir/Cargo.lock
+Finished cargoSetupPostPatchHook
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+Running phase: configurePhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+Running phase: buildPhase
+@nix { "action": "setPhase", "phase": "buildPhase" }
+mkdir -p ../build
+python gateware/kasli_soc.py -r ../build/pl.rs -c ../build/rustc-cfg -m ../build/mem.rs /opt/m1/workspace/sinara-firmware-compiler/examples/system_description_files/crate_mqva_dds_kasli_soc_v1.1_artiq_zynq_master_63157588bb8ed214bc9f24ade2d09b4ddefada03_drtio_satellite_wrpll_True_sed_32_periph_urukul_6_addr_10.0.0.50/crate_mqva_dds_kasli_soc_v1.1_artiq_zynq_master_63157588bb8ed214bc9f24ade2d09b4ddefada03_drtio_satellite_wrpll_True_sed_32_periph_urukul_6_addr_10.0.0.50.json
+Urukul (EEM0) starting at RTIO channel 0x000000
+Urukul (EEM2) starting at RTIO channel 0x000007
+Urukul (EEM4) starting at RTIO channel 0x00000e
+Urukul (EEM6) starting at RTIO channel 0x000015
+Urukul (EEM8) starting at RTIO channel 0x00001c
+Urukul (EEM10) starting at RTIO channel 0x000023
+USER LED at RTIO channel 0x00002a
+USER LED at RTIO channel 0x00002b
+[0msed s+@@ZYNQ_RS@@+/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source+g libboard_artiq/Cargo.toml.tpl > libboard_artiq/Cargo.toml
+sed s+@@ZYNQ_RS@@+/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source+g libc/Cargo.toml.tpl > libc/Cargo.toml
+sed s+@@ZYNQ_RS@@+/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source+g libdyld/Cargo.toml.tpl > libdyld/Cargo.toml
+sed s+@@ZYNQ_RS@@+/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source+g libio/Cargo.toml.tpl > libio/Cargo.toml
+sed s+@@ZYNQ_RS@@+/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source+g libksupport/Cargo.toml.tpl > libksupport/Cargo.toml
+sed s+@@ZYNQ_RS@@+/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source+g runtime/Cargo.toml.tpl > runtime/Cargo.toml
+sed s+@@ZYNQ_RS@@+/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source+g satman/Cargo.toml.tpl > satman/Cargo.toml
+cd satman && \
+XBUILD_SYSROOT_PATH=`pwd`/../../build/sysroot \
+cargo xbuild --release \
+	--target-dir ../../build/firmware \
+	--no-default-features --features=target_kasli_soc
+WARNING: There is no root package to read the cargo-xbuild config from.
+[0m[0m[1m[32m   Compiling[0m core v0.0.0 (/nix/store/k9zdjliq2v6pdjq0xkiy8lfl9g1s9f4x-rust-default-1.56.0-nightly-2021-09-01/lib/rustlib/src/rust/library/core)
+[0m[0m[1m[32m   Compiling[0m compiler_builtins v0.1.49
+[0m[0m[1m[32m   Compiling[0m rustc-std-workspace-core v1.99.0 (/nix/store/k9zdjliq2v6pdjq0xkiy8lfl9g1s9f4x-rust-default-1.56.0-nightly-2021-09-01/lib/rustlib/src/rust/library/rustc-std-workspace-core)
+[0m[0m[1m[32m   Compiling[0m alloc v0.0.0 (/build/cargo-xbuild9JkpFV)
+[0m[0m[1m[32m    Finished[0m release [optimized + debuginfo] target(s) in 4.54s
+[0m[0m[1m[32m   Compiling[0m byteorder v1.3.0
+[0m[0m[1m[32m   Compiling[0m vcell v0.1.3
+[0m[0m[1m[32m   Compiling[0m bit_field v0.10.1
+[0m[0m[1m[32m   Compiling[0m cc v1.0.77
+[0m[0m[1m[32m   Compiling[0m log v0.4.14
+[0m[0m[1m[32m   Compiling[0m bitflags v1.3.2
+[0m[0m[1m[32m   Compiling[0m autocfg v1.1.0
+[0m[0m[1m[32m   Compiling[0m cfg-if v1.0.0
+[0m[0m[1m[32m   Compiling[0m nb v1.0.0
+[0m[0m[1m[32m   Compiling[0m void v1.0.2
+[0m[0m[1m[32m   Compiling[0m managed v0.7.2
+[0m[0m[1m[32m   Compiling[0m compiler_builtins v0.1.49
+[0m[0m[1m[32m   Compiling[0m pin-utils v0.1.0
+[0m[0m[1m[32m   Compiling[0m libm v0.2.6
+[0m[0m[1m[32m   Compiling[0m build_zynq v0.0.0 (/build/src/libbuild_zynq)
+[0m[0m[1m[32m   Compiling[0m paste v1.0.15
+[0m[0m[1m[32m   Compiling[0m build_const v0.2.2
+[0m[0m[1m[32m   Compiling[0m core_io v0.1.0 (https://git.m-labs.hk/M-Labs/rs-core_io.git?rev=e9d3edf027#e9d3edf0)
+[0m[0m[1m[32m   Compiling[0m typenum v1.17.0
+[0m[0m[1m[32m   Compiling[0m r0 v1.0.0
+[0m[0m[1m[32m   Compiling[0m linked_list_allocator v0.8.11
+[0m[0m[1m[32m   Compiling[0m cfg-if v0.1.10
+[0m[0m[1m[32m   Compiling[0m cslice v0.3.0
+[0m[0m[1m[32m   Compiling[0m log_buffer v1.2.0
+[0m[0m[1m[32m   Compiling[0m volatile-register v0.2.1
+[0m[0m[1m[32m   Compiling[0m nb v0.1.3
+[0m[0m[1m[32m   Compiling[0m embedded-hal v0.2.7
+[0m[0m[1m[32m   Compiling[0m libregister v0.0.0 (/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source/libregister)
+[0m[0m[1m[32m   Compiling[0m libcortex_a9 v0.0.0 (/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source/libcortex_a9)
+[0m[0m[1m[32m   Compiling[0m crc v1.8.1
+[0m[0m[1m[32m   Compiling[0m libboard_artiq v0.0.0 (/build/src/libboard_artiq)
+[0m[0m[1m[32m   Compiling[0m ksupport v0.1.0 (/build/src/libksupport)
+[0m[0m[1m[32m   Compiling[0m satman v0.0.0 (/build/src/satman)
+[0m[0m[1m[32m   Compiling[0m num-traits v0.2.15
+[0m[0m[1m[32m   Compiling[0m num-rational v0.4.0
+[0m[0m[1m[32m   Compiling[0m dyld v0.1.0 (/build/src/libdyld)
+[0m[0m[1m[32m   Compiling[0m smoltcp v0.7.5
+[0m[0m[1m[32m   Compiling[0m fatfs v0.3.6 (https://git.m-labs.hk/M-Labs/rust-fatfs.git?rev=4b5e420084#4b5e4200)
+[0m[0m[1m[32m   Compiling[0m libsupport_zynq v0.0.0 (/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source/libsupport_zynq)
+[0m[0m[1m[32m   Compiling[0m libc v0.1.0 (/build/src/libc)
+[0m[0m[1m[32m   Compiling[0m unwind v0.0.0 (/build/src/libunwind)
+[0m[0m[1m[32m   Compiling[0m num-integer v0.1.46
+[0m[0m[1m[32m   Compiling[0m approx v0.5.1
+[0m[0m[1m[32m   Compiling[0m num-complex v0.4.0
+[0m[0m[1m[32m   Compiling[0m simba v0.8.0
+[0m[0m[1m[32m   Compiling[0m libasync v0.0.0 (/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source/libasync)
+[0m[0m[1m[33mwarning[0m[1m:[0m In file included from ../llvm_libunwind/src/libunwind.cpp:22:
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:1437:51: warning: operator '?:' has lower precedence than '|'; '|' will be evaluated first [-Wbitwise-conditional-parentheses]
+[0m[0m[1m[33mwarning[0m[1m:[0m   _info.flags = isSingleWordEHT ? 1 : 0 | scope32 ? 0x2 : 0;  // Use enum?
+[0m[0m[1m[33mwarning[0m[1m:[0m                                       ~~~~~~~~~~~ ^
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:1437:51: note: place parentheses around the '|' expression to silence this warning
+[0m[0m[1m[33mwarning[0m[1m:[0m   _info.flags = isSingleWordEHT ? 1 : 0 | scope32 ? 0x2 : 0;  // Use enum?
+[0m[0m[1m[33mwarning[0m[1m:[0m                                                   ^
+[0m[0m[1m[33mwarning[0m[1m:[0m                                       (          )
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:1437:51: note: place parentheses around the '?:' expression to evaluate it first
+[0m[0m[1m[33mwarning[0m[1m:[0m   _info.flags = isSingleWordEHT ? 1 : 0 | scope32 ? 0x2 : 0;  // Use enum?
+[0m[0m[1m[33mwarning[0m[1m:[0m                                                   ^
+[0m[0m[1m[33mwarning[0m[1m:[0m                                           (                )
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:1437:51: warning: operator '?:' has lower precedence than '|'; '|' will be evaluated first [-Wbitwise-conditional-parentheses]
+[0m[0m[1m[33mwarning[0m[1m:[0m   _info.flags = isSingleWordEHT ? 1 : 0 | scope32 ? 0x2 : 0;  // Use enum?
+[0m[0m[1m[33mwarning[0m[1m:[0m                                       ~~~~~~~~~~~ ^
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:1884:41: note: in instantiation of member function 'libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection' requested here
+[0m[0m[1m[33mwarning[0m[1m:[0m     if (sects.arm_section != 0 && this->getInfoFromEHABISection(pc, sects))
+[0m[0m[1m[33mwarning[0m[1m:[0m                                         ^
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:881:23: note: in instantiation of member function 'libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::setInfoBasedOnIPRegister' requested here
+[0m[0m[1m[33mwarning[0m[1m:[0m                       UnwindCursor(unw_context_t *context, A &as);
+[0m[0m[1m[33mwarning[0m[1m:[0m                       ^
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/libunwind.cpp:66:7: note: in instantiation of member function 'libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::UnwindCursor' requested here
+[0m[0m[1m[33mwarning[0m[1m:[0m       UnwindCursor<LocalAddressSpace, REGISTER_KIND>(
+[0m[0m[1m[33mwarning[0m[1m:[0m       ^
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:1437:51: note: place parentheses around the '|' expression to silence this warning
+[0m[0m[1m[33mwarning[0m[1m:[0m   _info.flags = isSingleWordEHT ? 1 : 0 | scope32 ? 0x2 : 0;  // Use enum?
+[0m[0m[1m[33mwarning[0m[1m:[0m                                                   ^
+[0m[0m[1m[33mwarning[0m[1m:[0m                                       (          )
+[0m[0m[1m[33mwarning[0m[1m:[0m ../llvm_libunwind/src/UnwindCursor.hpp:1437:51: note: place parentheses around the '?:' expression to evaluate it first
+[0m[0m[1m[33mwarning[0m[1m:[0m   _info.flags = isSingleWordEHT ? 1 : 0 | scope32 ? 0x2 : 0;  // Use enum?
+[0m[0m[1m[33mwarning[0m[1m:[0m                                                   ^
+[0m[0m[1m[33mwarning[0m[1m:[0m                                           (                )
+[0m[0m[1m[33mwarning[0m[1m:[0m 2 warnings generated.
+[0m[0m[1m[32m   Compiling[0m libboard_zynq v0.0.0 (/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source/libboard_zynq)
+[0m[0m[1m[32m   Compiling[0m libconfig v0.1.0 (/nix/store/zx7ahhaa5wv8l0f20jxvi4bj26w2bm4g-source/libconfig)
+[0m[0m[1m[32m   Compiling[0m io v0.0.0 (/build/src/libio)
+[0m[0m[1m[32m   Compiling[0m dwarf v0.0.0 (/build/src/libdwarf)
+[0m[0m[1m[32m   Compiling[0m nalgebra v0.32.6 (https://git.m-labs.hk/M-Labs/nalgebra.git?rev=ad42410ab0#ad42410a)
+[0m[0m[1m[32m    Finished[0m release [optimized + debuginfo] target(s) in 16.51s
+llvm-objcopy -O binary ../build/firmware/armv7-none-eabihf/release/satman ../build/satman.bin
+Running phase: installPhase
+@nix { "action": "setPhase", "phase": "installPhase" }

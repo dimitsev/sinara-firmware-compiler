@@ -1,0 +1,6 @@
+mkbootimage 2.3-nix
+Nodes found in the boot.bif file:
+ szl.elf (bootloader)
+ top.bit
+ runtime.elf
+All done, quitting

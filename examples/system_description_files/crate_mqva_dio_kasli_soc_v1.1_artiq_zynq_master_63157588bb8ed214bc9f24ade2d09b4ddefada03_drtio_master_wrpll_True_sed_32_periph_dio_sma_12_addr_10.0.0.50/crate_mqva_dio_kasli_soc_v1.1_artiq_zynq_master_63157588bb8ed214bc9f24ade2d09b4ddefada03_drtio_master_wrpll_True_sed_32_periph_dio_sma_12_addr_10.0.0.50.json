@@ -1,0 +1,133 @@
+{
+    "target": "kasli_soc",
+    "hw_rev": "v1.1",
+    "base": "use_drtio_role",
+    "drtio_role": "master",
+    "enable_wrpll": true,
+    "sed_lanes": 32,
+    "min_artiq_version": "8.0",
+    "core_addr": "10.0.0.50",
+    "variant": "crate_mqva_dio_kasli_soc_v1.1_artiq_zynq_master_63157588bb8ed214bc9f24ade2d09b4ddefada03_drtio_master_wrpll_True_sed_32_periph_dio_sma_12_addr_10.0.0.50",
+    "peripherals": [
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                0
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                1
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                2
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                3
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                4
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                5
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                6
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                7
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                8
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                9
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                10
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        },
+        {
+            "type": "dio",
+            "board": "DIO_SMA",
+            "hw_rev": "v1.4.1",
+            "ports": [
+                11
+            ],
+            "bank_direction_low": "input",
+            "bank_direction_high": "input"
+        }
+    ]
+}

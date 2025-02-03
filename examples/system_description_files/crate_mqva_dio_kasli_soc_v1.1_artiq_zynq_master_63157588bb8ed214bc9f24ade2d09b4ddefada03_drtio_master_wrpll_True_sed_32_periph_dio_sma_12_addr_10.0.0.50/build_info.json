@@ -1,0 +1,12 @@
+{
+    "artiq_zynq_branch": "master",
+    "artiq_zynq_commit": "63157588bb8ed214bc9f24ade2d09b4ddefada03",
+    "artiq_zynq_commit_date": "2025-01-15T21:17:34+08:00",
+    "firmware.drv": "/nix/store/yk3h5mv1xksxs88hjlh1yw3hfi608jvb-firmware.drv",
+    "gateware.drv": "/nix/store/9nmxil9q2mz6yvbrd7vl7mkxncacwzw0-kasli_soc-master-gateware.drv",
+    "sd.drv": "/nix/store/v49sxd9b2hbaqd4g3yl4nl5wxchrsjdg-kasli_soc-master-sd.drv",
+    "firmware": "/nix/store/7fdfvbh61vdw2bnp6zv5q31jh5q1s1rj-firmware",
+    "gateware": "/nix/store/z91vb4n5s345whx7vnc9l6la8fllm9iz-kasli_soc-master-gateware",
+    "sd": "/nix/store/d614r4c58msm71rlxhlizqvs0z0qn02r-kasli_soc-master-sd",
+    "timing_constraints_met": true
+}
