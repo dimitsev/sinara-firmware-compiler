@@ -89,9 +89,9 @@ def make_to_device_db(
     artiq_commit      : str,
 ):
     data = []
-    for index, group_df in system_df.groupby(level=[0,1]):
+    for (artiq_zynq_commit, system_id), group_df in system_df.groupby(level=[0,1]):
         master_id = group_df.xs(0, axis="index", level=3).index.get_level_values(2)[0]
-        master = group_df.loc[*index, master_id, 0]
+        master = group_df.loc[artiq_zynq_commit, system_id, master_id, 0]
         output_file_path = os.path.join(master["system_folder_path"], "device_db.py")
         master_json_file_path = compile_df["json_file_path"].loc[master["variant"]]
         satellite_variants = ([] if "satellite" not in group_df.index.get_level_values(2)

@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import numpy as np
 
 from .json_handling import from_json
 from .shell_handling import shell_wrapper
@@ -59,11 +60,13 @@ def make_device_dbs_and_dev_maps(
 ):
     device_db_df = pd.read_csv(to_device_db_file_path, sep=";", header=0)
     satellite_columns = [c for c in device_db_df.columns if c.startswith("satellite_")]
-    device_db_df["satellite_json_file_paths"] = device_db_df[satellite_columns].apply(
-        lambda row: [x for x in row if pd.notna(x)],
-        axis="columns",
-    )
-    device_db_df = device_db_df.drop(columns=satellite_columns)
+    device_db_df["satellite_json_file_paths"] = np.empty((len(device_db_df), 0)).tolist()
+    if len(satellite_columns) > 0:
+        device_db_df["satellite_json_file_paths"] = device_db_df[satellite_columns].apply(
+            lambda row: [x for x in row if pd.notna(x)],
+            axis="columns",
+        )
+        device_db_df = device_db_df.drop(columns=satellite_columns)
     for i, row in device_db_df.iterrows():
         device_db_path = row["output_file_path"]
         system_folder_path = os.path.dirname(device_db_path)
